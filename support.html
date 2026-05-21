@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — FanCalm</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --surface2: #16161f;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e8ed;
+      --secondary: #8e8e9a;
+      --accent: #4a9eff;
+      --green: #30d158;
+      --heading: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-icon svg { width: 18px; height: 18px; fill: white; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--heading); }
+    .doc-label {
+      font-size: 12px;
+      color: var(--secondary);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 56px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.8px;
+      margin-bottom: 14px;
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--secondary);
+      margin-bottom: 32px;
+    }
+    .contact-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .contact-btn:hover { opacity: 0.85; }
+
+    /* Quick links */
+    .quick-links {
+      max-width: 900px;
+      margin: 0 auto 64px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .quick-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .quick-card:hover { border-color: rgba(74,158,255,0.4); }
+    .quick-icon {
+      width: 40px; height: 40px;
+      background: rgba(74,158,255,0.12);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+    }
+    .quick-icon svg { width: 20px; height: 20px; fill: var(--accent); }
+    .quick-card h3 { font-size: 15px; font-weight: 600; color: var(--heading); margin-bottom: 6px; }
+    .quick-card p { font-size: 13px; color: var(--secondary); line-height: 1.5; }
+
+    /* FAQ */
+    .section-wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .section-sub { font-size: 15px; color: var(--secondary); margin-bottom: 32px; }
+
+    .faq-group { margin-bottom: 40px; }
+    .faq-group-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--secondary);
+      margin-bottom: 14px;
+    }
+    details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    details + details { }
+    summary {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 18px 20px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      transition: background 0.15s;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { background: var(--surface2); }
+    summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--secondary);
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] summary::after { content: '−'; }
+    details[open] summary { border-bottom: 1px solid var(--border); }
+    .faq-body {
+      padding: 20px;
+      font-size: 14.5px;
+      color: var(--text);
+      background: var(--surface2);
+      line-height: 1.7;
+    }
+    .faq-body p { margin-bottom: 10px; }
+    .faq-body p:last-child { margin-bottom: 0; }
+    .faq-body a { color: var(--accent); }
+    .faq-body ul { padding-left: 20px; margin-top: 8px; }
+    .faq-body li { margin: 5px 0; }
+
+    /* Contact section */
+    .contact-section {
+      max-width: 760px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .contact-card .c-icon {
+      width: 44px; height: 44px;
+      background: rgba(48,209,88,0.12);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .contact-card .c-icon svg { width: 22px; height: 22px; fill: var(--green); }
+    .contact-card h3 { font-size: 15px; font-weight: 600; color: var(--heading); margin-bottom: 6px; }
+    .contact-card p { font-size: 14px; color: var(--secondary); margin-bottom: 16px; line-height: 1.5; }
+    .contact-card a.btn {
+      display: inline-block;
+      background: rgba(48,209,88,0.12);
+      color: var(--green);
+      border: 1px solid rgba(48,209,88,0.2);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    .contact-card a.btn:hover { background: rgba(48,209,88,0.2); }
+    .contact-card a.btn.blue {
+      background: rgba(74,158,255,0.12);
+      color: var(--accent);
+      border-color: rgba(74,158,255,0.2);
+    }
+    .contact-card a.btn.blue:hover { background: rgba(74,158,255,0.2); }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-weight: 600;
+      background: rgba(48,209,88,0.15);
+      color: var(--green);
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* App info */
+    .app-info {
+      max-width: 760px;
+      margin: 0 auto 64px;
+      padding: 0 24px;
+    }
+    .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .app-icon-placeholder {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, #1a2a4a, #0a1628);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .app-icon-placeholder svg { width: 32px; height: 32px; fill: var(--accent); }
+    .app-info-text h3 { font-size: 17px; font-weight: 600; color: var(--heading); margin-bottom: 4px; }
+    .app-info-text p { font-size: 13px; color: var(--secondary); }
+    .app-store-btn {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    .app-store-btn:hover { opacity: 0.85; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 760px; margin: 0 auto; }
+    footer p { font-size: 13px; color: var(--secondary); margin-bottom: 8px; }
+    footer nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    footer nav a { font-size: 13px; color: var(--secondary); text-decoration: none; }
+    footer nav a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 12 5zm4.95 4.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM7.05 9.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM12 19a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 19zm4.95-4.05a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zm-9.9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/></svg>
+      </div>
+      <span class="brand-name">FanCalm</span>
+    </a>
+    <span class="doc-label">Support</span>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>How can we help?</h1>
+  <p>Find answers to common questions, or reach out to us directly. We typically respond within one business day.</p>
+  <a href="mailto:chun.feng@yanxixuechi-energy.com" class="contact-btn">Email Support</a>
+</div>
+
+<!-- Quick links -->
+<div class="quick-links">
+  <a class="quick-card" href="#getting-started">
+    <div class="quick-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+    </div>
+    <h3>Getting Started</h3>
+    <p>Setting up FanCalm for the first time</p>
+  </a>
+  <a class="quick-card" href="#sounds">
+    <div class="quick-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+    </div>
+    <h3>Sounds & Playback</h3>
+    <p>Fan sounds, volume, and playback issues</p>
+  </a>
+  <a class="quick-card" href="#subscriptions-faq">
+    <div class="quick-icon">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+    </div>
+    <h3>Subscriptions</h3>
+    <p>Billing, cancellation, and refunds</p>
+  </a>
+  <a class="quick-card" href="#technical">
+    <div class="quick-icon">
+      <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+    </div>
+    <h3>Troubleshooting</h3>
+    <p>Fix common technical issues</p>
+  </a>
+</div>
+
+<!-- App info -->
+<div class="app-info">
+  <div class="info-box">
+    <div class="app-icon-placeholder">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 12 5zm4.95 4.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM7.05 9.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM12 19a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 19zm4.95-4.05a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zm-9.9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/></svg>
+    </div>
+    <div class="app-info-text">
+      <h3>FanCalm · Fan Noise Sleep Aid</h3>
+      <p>Available on iOS 15.0 and later · iPhone and iPad · Free with optional Premium</p>
+    </div>
+    <a class="app-store-btn" href="https://apps.apple.com" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      App Store
+    </a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section-wrap">
+  <div class="section-title">Frequently Asked Questions</div>
+  <div class="section-sub">Answers to the most common questions about FanCalm.</div>
+
+  <!-- Getting Started -->
+  <div class="faq-group" id="getting-started">
+    <div class="faq-group-title">Getting Started</div>
+
+    <details>
+      <summary>What is FanCalm?</summary>
+      <div class="faq-body">
+        <p>FanCalm is a minimal, high-quality fan noise app for iPhone and iPad. It plays realistic fan sounds — including box fan, tower fan, desk fan, and more — to help you fall asleep, stay focused, or block out distracting noise.</p>
+        <p>It's designed for people who prefer the natural, familiar sound of a fan over generic white noise or music.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Is FanCalm free?</summary>
+      <div class="faq-body">
+        <p>Yes. FanCalm is free to download and use. Core fan sounds are available at no cost.</p>
+        <p>An optional <strong>FanCalm Premium</strong> subscription unlocks additional sounds, advanced features like custom blend mixing, extended sleep timers, and removes ads.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What iOS version do I need?</summary>
+      <div class="faq-body">
+        <p>FanCalm requires <strong>iOS 15.0 or later</strong>. It is compatible with iPhone and iPad. For the best experience, we recommend running the latest version of iOS.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Does FanCalm work offline?</summary>
+      <div class="faq-body">
+        <p>Yes. All fan sounds in FanCalm are stored locally on your device. You do not need an internet connection to use the App once it has been downloaded.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Sounds & Playback -->
+  <div class="faq-group" id="sounds">
+    <div class="faq-group-title">Sounds &amp; Playback</div>
+
+    <details>
+      <summary>Will FanCalm keep playing when my phone screen locks?</summary>
+      <div class="faq-body">
+        <p>Yes. FanCalm uses iOS background audio so sound continues to play when the screen locks or when you switch to another app. You can control playback from the Lock Screen or Control Center.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What happens if I receive a phone call?</summary>
+      <div class="faq-body">
+        <p>FanCalm automatically pauses when a call comes in. <strong>Premium users</strong> benefit from automatic resumption after the call ends — playback restarts where you left off without any action needed.</p>
+        <p>Free users can manually tap play to resume after a call.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I set a sleep timer?</summary>
+      <div class="faq-body">
+        <p>Tap the timer icon in the main playback screen. You can set a duration from 15 minutes to 10 hours. The sound will gradually fade out when the timer ends so you're not jolted awake.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I play FanCalm alongside other audio apps?</summary>
+      <div class="faq-body">
+        <p>FanCalm is designed as a standalone audio app and will by default interrupt other audio. If you want to mix FanCalm with other audio (for example, music from Spotify), use the volume mixer in your iOS Control Center to balance both sources.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What fan sounds are included?</summary>
+      <div class="faq-body">
+        <p>FanCalm includes a curated set of high-quality, professionally recorded fan sounds:</p>
+        <ul>
+          <li>Box Fan (classic, close, distant)</li>
+          <li>Tower Fan</li>
+          <li>Desk Fan</li>
+          <li>Industrial Fan</li>
+          <li>Oscillating Fan</li>
+          <li>Brown Noise blend</li>
+          <li>Focus Fan (tuned for ADHD concentration)</li>
+        </ul>
+        <p>Additional sounds are available with Premium.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Subscriptions -->
+  <div class="faq-group" id="subscriptions-faq">
+    <div class="faq-group-title">Subscriptions &amp; Billing</div>
+
+    <details>
+      <summary>How do I subscribe to FanCalm Premium?</summary>
+      <div class="faq-body">
+        <p>Tap the <strong>Premium</strong> button anywhere in the App, or go to <strong>Settings → Upgrade to Premium</strong>. Select your preferred plan (Monthly, Annual, or Lifetime) and confirm with your Apple ID.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I cancel my subscription?</summary>
+      <div class="faq-body">
+        <p>FanCalm subscriptions are managed entirely by Apple. To cancel:</p>
+        <ul>
+          <li>Open <strong>Settings</strong> on your iPhone</li>
+          <li>Tap your name at the top → <strong>Subscriptions</strong></li>
+          <li>Find <strong>FanCalm</strong> and tap <strong>Cancel Subscription</strong></li>
+        </ul>
+        <p>You will retain access to Premium features until the end of the current billing period.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I restore my purchase on a new device?</summary>
+      <div class="faq-body">
+        <p>Open FanCalm, go to <strong>Settings → Restore Purchases</strong>, and tap the button. Your purchases will be restored as long as you are signed in with the same Apple ID used to make the original purchase.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I request a refund?</summary>
+      <div class="faq-body">
+        <p>All purchases are processed by Apple. To request a refund:</p>
+        <ul>
+          <li>Visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a></li>
+          <li>Sign in with your Apple ID</li>
+          <li>Find the FanCalm purchase and select "I'd like to request a refund"</li>
+        </ul>
+        <p>Apple typically processes refund decisions within 48 hours.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>I subscribed but premium features aren't unlocked. What do I do?</summary>
+      <div class="faq-body">
+        <p>First, try restoring your purchases: go to <strong>Settings → Restore Purchases</strong> in the App. If that doesn't work:</p>
+        <ul>
+          <li>Force-close the App and reopen it</li>
+          <li>Check that you are signed in to the correct Apple ID</li>
+          <li>Ensure you have a working internet connection when restoring</li>
+        </ul>
+        <p>If the issue persists, contact us at <a href="mailto:chun.feng@yanxixuechi-energy.com">chun.feng@yanxixuechi-energy.com</a> with your Apple ID email and we'll resolve it promptly.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="faq-group" id="technical">
+    <div class="faq-group-title">Troubleshooting</div>
+
+    <details>
+      <summary>The sound stops playing after a few minutes. How do I fix this?</summary>
+      <div class="faq-body">
+        <p>This is usually caused by iOS Low Power Mode or Background App Refresh being disabled. Try the following:</p>
+        <ul>
+          <li>Go to <strong>Settings → Battery</strong> and turn off <strong>Low Power Mode</strong></li>
+          <li>Go to <strong>Settings → General → Background App Refresh</strong> and enable it for FanCalm</li>
+          <li>Make sure your device is not in Do Not Disturb mode that silences audio</li>
+        </ul>
+        <p>If the problem continues, contact us with your device model and iOS version.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>The app crashes when I open it. What should I do?</summary>
+      <div class="faq-body">
+        <p>Try these steps in order:</p>
+        <ul>
+          <li><strong>Force-close and reopen:</strong> Swipe up from the bottom of the screen to the App Switcher, swipe FanCalm away, then reopen it.</li>
+          <li><strong>Restart your device:</strong> Hold the power button and slide to power off, then restart.</li>
+          <li><strong>Update the App:</strong> Check the App Store for pending updates for FanCalm.</li>
+          <li><strong>Reinstall:</strong> Delete the App and reinstall it from the App Store. Your subscription is linked to your Apple ID and will be restored.</li>
+        </ul>
+        <p>If it still crashes, please email us at <a href="mailto:chun.feng@yanxixuechi-energy.com">chun.feng@yanxixuechi-energy.com</a> and include your iPhone model and iOS version.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>No sound is playing. What's wrong?</summary>
+      <div class="faq-body">
+        <p>Check the following:</p>
+        <ul>
+          <li>Make sure your device is not on silent / mute (check the physical switch on the side of your iPhone)</li>
+          <li>Check that the volume is turned up in the App and on your device</li>
+          <li>Try unplugging and re-plugging your headphones if you are using wired audio</li>
+          <li>Check that Bluetooth is connected to the correct device if using wireless audio</li>
+          <li>Restart the App</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I delete my data?</summary>
+      <div class="faq-body">
+        <p>To delete all local data associated with FanCalm, simply delete the App from your device. This removes all locally stored settings and preferences.</p>
+        <p>To request deletion of any personal data we may hold (such as support emails), contact us at <a href="mailto:chun.feng@yanxixuechi-energy.com">chun.feng@yanxixuechi-energy.com</a> and we will process your request within 30 days.</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+<!-- Contact section -->
+<div class="contact-section">
+  <div class="section-title">Still need help?</div>
+  <div class="section-sub">Our support team is real humans who actually use FanCalm. We respond fast.</div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="c-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <h3>Email Support <span class="badge">Recommended</span></h3>
+      <p>Send us a message and we'll get back to you within one business day.</p>
+      <a href="mailto:chun.feng@yanxixuechi-energy.com" class="btn">chun.feng@yanxixuechi-energy.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="c-icon" style="background: rgba(74,158,255,0.12);">
+        <svg viewBox="0 0 24 24" style="fill: var(--accent)"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.546 20.5l3.42-.875A9.956 9.956 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.952 7.952 0 0 1-4.069-1.112l-.29-.173-2.032.52.536-1.965-.19-.304A7.956 7.956 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+      </div>
+      <h3>Privacy Requests</h3>
+      <p>Data deletion, access requests, or privacy-related questions.</p>
+      <a href="mailto:chun.feng@yanxixuechi-energy.com" class="btn blue">chun.feng@yanxixuechi-energy.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="c-icon" style="background: rgba(74,158,255,0.12);">
+        <svg viewBox="0 0 24 24" style="fill: var(--accent)"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+      </div>
+      <h3>Report a Bug</h3>
+      <p>Found a bug or unexpected behavior? Tell us so we can fix it fast.</p>
+      <a href="mailto:chun.feng@yanxixuechi-energy.com?subject=Bug%20Report%20-%20FanCalm" class="btn blue">Report a Bug</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 FanCalm. All rights reserved.</p>
+    <nav>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

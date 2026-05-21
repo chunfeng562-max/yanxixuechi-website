@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — FanCalm</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e8ed;
+      --secondary: #8e8e9a;
+      --accent: #4a9eff;
+      --heading: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-icon svg { width: 18px; height: 18px; fill: white; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--heading); }
+    .doc-label {
+      font-size: 12px;
+      color: var(--secondary);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .page-title { font-size: 36px; font-weight: 700; color: var(--heading); letter-spacing: -0.5px; margin-bottom: 8px; }
+    .page-meta { font-size: 14px; color: var(--secondary); margin-bottom: 48px; }
+    .page-meta span { color: var(--accent); }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--secondary); margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin: 6px 0; }
+    .toc a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .toc a:hover { text-decoration: underline; }
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 22px; font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 16px; font-weight: 600; color: var(--heading); margin: 20px 0 8px; }
+    p { margin-bottom: 14px; color: var(--text); }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin: 6px 0; color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout {
+      background: rgba(74,158,255,0.08);
+      border: 1px solid rgba(74,158,255,0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #a8c9ff;
+    }
+    .callout strong { color: var(--accent); }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: rgba(74,158,255,0.15);
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 16px;
+    }
+    .contact-box p { margin-bottom: 6px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 760px; margin: 0 auto; }
+    footer p { font-size: 13px; color: var(--secondary); margin-bottom: 8px; }
+    footer nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    footer nav a { font-size: 13px; color: var(--secondary); text-decoration: none; }
+    footer nav a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 12 5zm4.95 4.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM7.05 9.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM12 19a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 19zm4.95-4.05a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zm-9.9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/></svg>
+      </div>
+      <span class="brand-name">FanCalm</span>
+    </a>
+    <span class="doc-label">Privacy Policy</span>
+  </div>
+</header>
+
+<main>
+  <div class="page-title">Privacy Policy</div>
+  <p class="page-meta">FanCalm · Fan Noise Sleep Aid &nbsp;·&nbsp; Last updated: <span>May 21, 2026</span> &nbsp;·&nbsp; Effective: May 21, 2026</p>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#information-collected">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#third-parties">Third-Party Services</a></li>
+      <li><a href="#data-retention">Data Retention</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p>FanCalm ("we," "our," or "us") operates the FanCalm: Fan Noise Sleep Aid mobile application (the "App") available on the Apple App Store. We are committed to protecting your privacy.</p>
+    <p>This Privacy Policy explains what information we collect, how we use it, and your choices regarding your data when you use FanCalm. By using the App, you agree to the practices described in this policy.</p>
+    <div class="callout">
+      <strong>Short version:</strong> FanCalm is a simple audio app. We collect only the minimum data required to operate, improve, and support the App. We do not sell your personal information to any third party.
+    </div>
+  </section>
+
+  <section id="information-collected">
+    <h2>2. Information We Collect</h2>
+
+    <h3>Information You Provide Directly</h3>
+    <p>FanCalm does not require you to create an account. We may collect information you voluntarily provide when you:</p>
+    <ul>
+      <li>Contact our support team via email</li>
+      <li>Submit a bug report or feature request</li>
+      <li>Leave a review or rating on the App Store</li>
+    </ul>
+
+    <h3>Information Collected Automatically</h3>
+    <p>When you use FanCalm, we may automatically collect the following types of data:</p>
+    <ul>
+      <li><strong>Device information:</strong> Device model, iOS version, device language, and time zone — used to ensure compatibility and improve performance.</li>
+      <li><strong>Usage data:</strong> Which sounds you play, session duration, app launch frequency, and feature interactions — used to improve the App experience.</li>
+      <li><strong>Crash reports:</strong> Diagnostic data and crash logs to help us identify and fix bugs.</li>
+      <li><strong>Purchase information:</strong> If you subscribe or make an in-app purchase, Apple processes the transaction. We receive confirmation of the purchase but do not receive your payment card details.</li>
+    </ul>
+
+    <h3>Information We Do NOT Collect</h3>
+    <ul>
+      <li>We do not collect your name, email address, or contact information unless you contact us directly.</li>
+      <li>We do not access your microphone, camera, contacts, location, or health data.</li>
+      <li>We do not track you across other apps or websites.</li>
+    </ul>
+  </section>
+
+  <section id="how-we-use">
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li><strong>To provide and maintain the App:</strong> Deliver audio content, remember your settings and preferences, and ensure the App functions correctly.</li>
+      <li><strong>To improve the App:</strong> Analyze usage patterns to improve existing features and develop new ones.</li>
+      <li><strong>To provide customer support:</strong> Respond to your inquiries, bug reports, and feedback.</li>
+      <li><strong>To manage subscriptions:</strong> Verify your subscription status and unlock premium features.</li>
+      <li><strong>To comply with legal obligations:</strong> Comply with applicable laws and regulations.</li>
+    </ul>
+    <p>We do not use your data for targeted advertising and do not build advertising profiles based on your App usage.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2>4. Third-Party Services</h2>
+    <p>FanCalm may use the following third-party services, each with their own privacy practices:</p>
+
+    <h3>Apple Services</h3>
+    <ul>
+      <li><strong>Apple App Store:</strong> Manages app distribution, in-app purchases, and subscriptions. See <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>.</li>
+      <li><strong>Apple Sign-In (if used):</strong> Handles authentication without exposing your credentials to us.</li>
+    </ul>
+
+    <h3>Analytics</h3>
+    <ul>
+      <li>We may use privacy-focused analytics tools to understand aggregate usage trends. Any such tool is configured to avoid collecting personally identifiable information.</li>
+    </ul>
+
+    <h3>Crash Reporting</h3>
+    <ul>
+      <li>We may use crash reporting services to collect diagnostic information when the App crashes. This data is anonymized and used solely to fix bugs.</li>
+    </ul>
+
+    <p>We do not share your personal information with advertisers, data brokers, or any other third parties for commercial purposes.</p>
+  </section>
+
+  <section id="data-retention">
+    <h2>5. Data Retention</h2>
+    <p>We retain your data only as long as necessary to provide the App and fulfill the purposes described in this policy:</p>
+    <ul>
+      <li><strong>Usage and analytics data</strong> is retained in aggregate, anonymized form and may be kept indefinitely.</li>
+      <li><strong>Crash reports</strong> are typically deleted after 90 days once the underlying issue is resolved.</li>
+      <li><strong>Support correspondence</strong> is retained for up to 2 years to provide consistent support.</li>
+    </ul>
+    <p>You may request deletion of any personal data we hold by contacting us at the address below.</p>
+  </section>
+
+  <section id="children">
+    <h2>6. Children's Privacy</h2>
+    <div class="callout">
+      <strong>Important:</strong> FanCalm is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.
+    </div>
+    <p>FanCalm is designed for general audiences, including parents using the App to help infants sleep. In this context, the App is operated by the adult parent or guardian — no data is collected directly from the child.</p>
+    <p>If you believe we have inadvertently collected information from a child under 13, please contact us immediately and we will delete such information promptly.</p>
+    <p>For users in the European Economic Area, we apply a minimum age of 16 where required by local law.</p>
+  </section>
+
+  <section id="your-rights">
+    <h2>7. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+      <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete data.</li>
+      <li><strong>Deletion:</strong> Request that we delete your personal data ("right to be forgotten").</li>
+      <li><strong>Portability:</strong> Request that we provide your data in a machine-readable format.</li>
+      <li><strong>Opt-out of analytics:</strong> You can limit analytics data collection via iOS Settings → Privacy & Security → Apple Advertising and through per-app tracking permission controls.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details in Section 10. We will respond within 30 days.</p>
+
+    <h3>California Residents (CCPA)</h3>
+    <p>California residents have additional rights under the California Consumer Privacy Act, including the right to know what personal information is collected, the right to delete personal information, and the right to opt out of the sale of personal information. We do not sell personal information.</p>
+  </section>
+
+  <section id="security">
+    <h2>8. Data Security</h2>
+    <p>We implement industry-standard security measures to protect your information, including:</p>
+    <ul>
+      <li>Encrypted data transmission (HTTPS/TLS for all network communications)</li>
+      <li>Access controls limiting who within our team can access user data</li>
+      <li>Regular security reviews of our systems and practices</li>
+    </ul>
+    <p>However, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security, but we are committed to protecting your data using commercially reasonable means.</p>
+  </section>
+
+  <section id="changes">
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will:</p>
+    <ul>
+      <li>Update the "Last updated" date at the top of this page</li>
+      <li>Notify you via an in-app notice for material changes</li>
+    </ul>
+    <p>Your continued use of FanCalm after any changes constitutes your acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+  </section>
+
+  <section id="contact">
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us:</p>
+    <div class="contact-box">
+      <p><strong>FanCalm</strong></p>
+      <p>Email: <a href="mailto:chun.feng@yanxixuechi-energy.com">chun.feng@yanxixuechi-energy.com</a></p>
+      <p>Support: <a href="support.html">fancalm.app/support</a></p>
+      <p>We aim to respond to all privacy-related inquiries within <strong>5 business days</strong>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 FanCalm. All rights reserved.</p>
+    <nav>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

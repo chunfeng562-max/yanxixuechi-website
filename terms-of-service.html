@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — FanCalm</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e8ed;
+      --secondary: #8e8e9a;
+      --accent: #4a9eff;
+      --heading: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-icon svg { width: 18px; height: 18px; fill: white; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--heading); }
+    .doc-label {
+      font-size: 12px;
+      color: var(--secondary);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .page-title { font-size: 36px; font-weight: 700; color: var(--heading); letter-spacing: -0.5px; margin-bottom: 8px; }
+    .page-meta { font-size: 14px; color: var(--secondary); margin-bottom: 48px; }
+    .page-meta span { color: var(--accent); }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--secondary); margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin: 6px 0; }
+    .toc a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .toc a:hover { text-decoration: underline; }
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 22px; font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 16px; font-weight: 600; color: var(--heading); margin: 20px 0 8px; }
+    p { margin-bottom: 14px; color: var(--text); }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin: 6px 0; color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout {
+      background: rgba(74,158,255,0.08);
+      border: 1px solid rgba(74,158,255,0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #a8c9ff;
+    }
+    .callout strong { color: var(--accent); }
+    .callout.warning {
+      background: rgba(255,180,50,0.08);
+      border-color: rgba(255,180,50,0.2);
+      color: #ffd580;
+    }
+    .callout.warning strong { color: #ffb432; }
+    .subscription-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+    }
+    .subscription-table th {
+      background: rgba(74,158,255,0.12);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px 16px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .subscription-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+      vertical-align: top;
+    }
+    .subscription-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 16px;
+    }
+    .contact-box p { margin-bottom: 6px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 760px; margin: 0 auto; }
+    footer p { font-size: 13px; color: var(--secondary); margin-bottom: 8px; }
+    footer nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    footer nav a { font-size: 13px; color: var(--secondary); text-decoration: none; }
+    footer nav a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 12 5zm4.95 4.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM7.05 9.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM12 19a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 19zm4.95-4.05a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zm-9.9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/></svg>
+      </div>
+      <span class="brand-name">FanCalm</span>
+    </a>
+    <span class="doc-label">Terms of Service</span>
+  </div>
+</header>
+
+<main>
+  <div class="page-title">Terms of Service</div>
+  <p class="page-meta">FanCalm · Fan Noise Sleep Aid &nbsp;·&nbsp; Last updated: <span>May 21, 2026</span> &nbsp;·&nbsp; Effective: May 21, 2026</p>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#license">License to Use</a></li>
+      <li><a href="#subscriptions">Subscriptions & In-App Purchases</a></li>
+      <li><a href="#acceptable-use">Acceptable Use</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#governing-law">Governing Law</a></li>
+      <li><a href="#apple-terms">Apple-Specific Terms (EULA)</a></li>
+      <li><a href="#changes">Changes to Terms</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section id="acceptance">
+    <h2>1. Acceptance of Terms</h2>
+    <p>These Terms of Service ("Terms") govern your access to and use of FanCalm: Fan Noise Sleep Aid (the "App"), developed and operated by FanCalm ("we," "us," or "our").</p>
+    <p>By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the App.</p>
+    <p>You must be at least 13 years old to use the App. By using the App, you represent that you meet this age requirement. If you are using the App on behalf of a minor, you accept these Terms on the minor's behalf and take responsibility for their use.</p>
+  </section>
+
+  <section id="license">
+    <h2>2. License to Use</h2>
+    <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download and use the App on Apple-branded devices that you own or control, solely for your personal, non-commercial purposes.</p>
+    <p>This license does not include the right to:</p>
+    <ul>
+      <li>Copy, modify, adapt, or create derivative works of the App</li>
+      <li>Reverse engineer, decompile, or disassemble the App</li>
+      <li>Sublicense, sell, resell, transfer, or otherwise exploit the App commercially</li>
+      <li>Remove or alter any proprietary notices or labels in the App</li>
+      <li>Use the App in any way that violates applicable law</li>
+    </ul>
+  </section>
+
+  <section id="subscriptions">
+    <h2>3. Subscriptions &amp; In-App Purchases</h2>
+
+    <div class="callout">
+      <strong>Free version:</strong> FanCalm offers core features at no cost. Premium features are available through an optional auto-renewing subscription.
+    </div>
+
+    <h3>Subscription Plans</h3>
+    <table class="subscription-table">
+      <tr>
+        <th>Plan</th>
+        <th>Duration</th>
+        <th>Billing</th>
+      </tr>
+      <tr>
+        <td>FanCalm Premium Monthly</td>
+        <td>1 month</td>
+        <td>Auto-renews monthly</td>
+      </tr>
+      <tr>
+        <td>FanCalm Premium Annual</td>
+        <td>1 year</td>
+        <td>Auto-renews annually</td>
+      </tr>
+      <tr>
+        <td>FanCalm Lifetime</td>
+        <td>Lifetime access</td>
+        <td>One-time purchase</td>
+      </tr>
+    </table>
+
+    <h3>Billing & Renewal</h3>
+    <ul>
+      <li>Payment is charged to your Apple ID account upon purchase confirmation.</li>
+      <li>Subscriptions automatically renew unless auto-renewal is turned off at least 24 hours before the end of the current period.</li>
+      <li>Your account will be charged for renewal within 24 hours prior to the end of the current subscription period.</li>
+      <li>You can manage and cancel your subscription at any time in your Apple ID account settings.</li>
+    </ul>
+
+    <h3>Free Trials</h3>
+    <p>When a free trial is offered, you will not be charged until the trial period ends. If you cancel before the end of the trial, you will not be charged. Unused portions of a free trial are forfeited upon purchase.</p>
+
+    <h3>Refund Policy</h3>
+    <p>All purchases are processed through Apple. Refund requests must be made directly to Apple. We do not process refunds directly. To request a refund, visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
+
+    <div class="callout warning">
+      <strong>No refunds for partial subscription periods.</strong> When you cancel an active subscription, you retain access to premium features until the end of the paid period. We do not provide pro-rated refunds for unused subscription time.
+    </div>
+
+    <h3>Price Changes</h3>
+    <p>We reserve the right to change subscription prices. Any price change will be communicated with advance notice, and the new price will take effect at your next renewal period. You have the right to cancel before a price change takes effect.</p>
+  </section>
+
+  <section id="acceptable-use">
+    <h2>4. Acceptable Use</h2>
+    <p>You agree not to use the App to:</p>
+    <ul>
+      <li>Violate any applicable local, state, national, or international law or regulation</li>
+      <li>Transmit any harmful, offensive, or disruptive content</li>
+      <li>Attempt to gain unauthorized access to any part of the App or its related systems</li>
+      <li>Use automated tools to scrape, extract, or harvest App data</li>
+      <li>Interfere with or disrupt the integrity or performance of the App</li>
+      <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the App</li>
+    </ul>
+  </section>
+
+  <section id="ip">
+    <h2>5. Intellectual Property</h2>
+    <p>The App, including all of its content, features, functionality, design, user interface, audio recordings, and underlying code, is owned by FanCalm and is protected by copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+    <p>All fan sounds, ambient audio recordings, and sound designs included in the App are original recordings or licensed content and are protected by copyright. You may not extract, copy, redistribute, or use any audio content from the App outside of the App itself.</p>
+    <p>"FanCalm" and related logos and marks are trademarks of FanCalm. You may not use them without our prior written consent.</p>
+  </section>
+
+  <section id="disclaimer">
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+    <p>We do not warrant that:</p>
+    <ul>
+      <li>The App will be uninterrupted, error-free, or free of viruses or other harmful components</li>
+      <li>The App will meet your specific requirements or expectations</li>
+      <li>Any errors or defects will be corrected</li>
+    </ul>
+    <p><strong>Health disclaimer:</strong> FanCalm is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition, including sleep disorders, ADHD, anxiety, or any other health condition. If you have concerns about your health, consult a qualified healthcare professional.</p>
+  </section>
+
+  <section id="liability">
+    <h2>7. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, FANCALM AND ITS AFFILIATES, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR:</p>
+    <ul>
+      <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+      <li>Loss of profits, data, goodwill, or other intangible losses</li>
+      <li>Damages resulting from your use or inability to use the App</li>
+      <li>Unauthorized access to or alteration of your data</li>
+    </ul>
+    <p>IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE 12 MONTHS PRECEDING THE CLAIM, OR $10.00, WHICHEVER IS GREATER.</p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities, so some of the above limitations may not apply to you.</p>
+  </section>
+
+  <section id="termination">
+    <h2>8. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the App at any time, with or without cause or notice, including but not limited to if we believe you have violated these Terms.</p>
+    <p>Upon termination, your license to use the App will immediately cease. Sections 5, 6, 7, and 9 of these Terms shall survive termination.</p>
+    <p>You may stop using the App at any time by deleting it from your device. To cancel a subscription, manage your subscription through your Apple ID account settings.</p>
+  </section>
+
+  <section id="governing-law">
+    <h2>9. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
+    <p>Any dispute arising out of or relating to these Terms or the App that cannot be resolved informally shall be submitted to binding arbitration under the rules of the American Arbitration Association, except that either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent the actual or threatened infringement of intellectual property rights.</p>
+    <p>You agree that any dispute resolution will take place on an individual basis; class action lawsuits and class-wide arbitrations are not permitted.</p>
+  </section>
+
+  <section id="apple-terms">
+    <h2>10. Apple-Specific Terms (EULA)</h2>
+    <p>The following additional terms apply because the App is distributed through the Apple App Store. In the event of a conflict between these Apple-specific terms and other provisions of these Terms, the Apple-specific terms shall govern with respect to Apple's role.</p>
+
+    <h3>Acknowledgment</h3>
+    <p>You acknowledge that these Terms are between you and FanCalm only, and not with Apple, Inc. ("Apple"). Apple is not responsible for the App or its content.</p>
+
+    <h3>Scope of License</h3>
+    <p>The license granted to you is limited to a non-transferable license to use the App on any Apple-branded products that you own or control as permitted by the App Store Usage Rules in Apple's Terms of Service.</p>
+
+    <h3>Maintenance and Support</h3>
+    <p>FanCalm, not Apple, is solely responsible for providing maintenance and support services for the App. Apple has no obligation whatsoever to provide any maintenance or support services with respect to the App.</p>
+
+    <h3>Warranty</h3>
+    <p>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App (if applicable). To the maximum extent permitted by applicable law, Apple will have no other warranty obligation with respect to the App. Any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to any warranty are FanCalm's sole responsibility.</p>
+
+    <h3>Product Claims</h3>
+    <p>FanCalm, not Apple, is responsible for addressing any claims relating to the App or your possession and/or use of the App, including: (i) product liability claims; (ii) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation.</p>
+
+    <h3>Third-Party Beneficiary</h3>
+    <p>You acknowledge and agree that Apple and its subsidiaries are third-party beneficiaries of these Terms, and that Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof.</p>
+
+    <h3>Intellectual Property Rights</h3>
+    <p>In the event of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, FanCalm, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such claim.</p>
+  </section>
+
+  <section id="changes">
+    <h2>11. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. When we make changes, we will update the "Last updated" date and, for material changes, notify you via an in-app notification.</p>
+    <p>Your continued use of the App after the revised Terms take effect constitutes your acceptance of the new Terms. If you do not agree to the new Terms, you must stop using the App.</p>
+  </section>
+
+  <section id="contact">
+    <h2>12. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us:</p>
+    <div class="contact-box">
+      <p><strong>FanCalm</strong></p>
+      <p>Email: <a href="mailto:chun.feng@yanxixuechi-energy.com">chun.feng@yanxixuechi-energy.com</a></p>
+      <p>Support: <a href="support.html">fancalm.app/support</a></p>
+      <p>We will respond to inquiries within <strong>5 business days</strong>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 FanCalm. All rights reserved.</p>
+    <nav>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
