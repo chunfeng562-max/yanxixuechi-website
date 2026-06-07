@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — FanCalm</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e8ed;
+      --secondary: #8e8e9a;
+      --accent: #4a9eff;
+      --heading: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-icon {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-icon svg { width: 18px; height: 18px; fill: white; }
+    .brand-name { font-size: 15px; font-weight: 600; color: var(--heading); }
+    .doc-label {
+      font-size: 12px;
+      color: var(--secondary);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .page-title { font-size: 36px; font-weight: 700; color: var(--heading); letter-spacing: -0.5px; margin-bottom: 8px; }
+    .page-meta { font-size: 14px; color: var(--secondary); margin-bottom: 48px; }
+    .page-meta span { color: var(--accent); }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--secondary); margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { margin: 6px 0; }
+    .toc a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .toc a:hover { text-decoration: underline; }
+    section { margin-bottom: 48px; }
+    h2 {
+      font-size: 22px; font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 16px; font-weight: 600; color: var(--heading); margin: 20px 0 8px; }
+    h4 { font-size: 14px; font-weight: 600; color: var(--heading); margin: 16px 0 6px; }
+    p { margin-bottom: 14px; color: var(--text); }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    li { margin: 6px 0; color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout {
+      background: rgba(74,158,255,0.08);
+      border: 1px solid rgba(74,158,255,0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #a8c9ff;
+    }
+    .callout strong { color: var(--accent); }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: rgba(74,158,255,0.15);
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 16px;
+    }
+    .contact-box p { margin-bottom: 6px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 760px; margin: 0 auto; }
+    footer p { font-size: 13px; color: var(--secondary); margin-bottom: 8px; }
+    footer nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+    footer nav a { font-size: 13px; color: var(--secondary); text-decoration: none; }
+    footer nav a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 12 5zm4.95 4.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM7.05 9.05a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zM12 19a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 12 19zm4.95-4.05a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zm-9.9 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/></svg>
+      </div>
+      <span class="brand-name">FanCalm</span>
+    </a>
+    <span class="doc-label">Privacy Policy</span>
+  </div>
+</header>
+
+<main>
+  <div class="page-title">Privacy Policy</div>
+  <p class="page-meta">FanCalm · Fan Noise Sleep Aid &nbsp;·&nbsp; Last updated: <span>June 7, 2026</span> &nbsp;·&nbsp; Effective: June 7, 2026</p>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#information-collected">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#third-parties">Third-Party Services</a></li>
+      <li><a href="#data-retention">Data Retention</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p>FanCalm ("we," "our," or "us") operates the FanCalm: Fan Noise Sleep Aid mobile application (the "App") available on the Apple App Store. We are committed to protecting your privacy.</p>
+    <p>This Privacy Policy explains what information the App collects, how we use it, which third-party services process it, and your choices. By using the App, you agree to the practices described in this policy.</p>
+    <div class="callout">
+      <strong>Short version:</strong> FanCalm does not require an account. Most preferences (favorites, timer settings) stay on your device. To understand how the App is used and to measure subscription performance, we send analytics data to <strong>Mixpanel</strong> and <strong>Google Firebase Analytics</strong>. We do not sell your personal information. We do not request access to the iOS App Tracking Transparency (ATT) prompt and do not collect your advertising identifier (IDFA).
+    </div>
+  </section>
+
+  <section id="information-collected">
+    <h2>2. Information We Collect</h2>
+
+    <h3>Information You Provide Directly</h3>
+    <p>FanCalm does not require you to create an account. We may receive information you voluntarily provide when you:</p>
+    <ul>
+      <li>Contact our support team via email or the in-app feedback composer</li>
+      <li>Submit a bug report or feature request</li>
+      <li>Leave a review or rating on the App Store (handled by Apple, not us)</li>
+    </ul>
+    <p>If you contact us by email, we receive the content of your message and your email address.</p>
+
+    <h3>Information Stored on Your Device Only</h3>
+    <p>The following data is stored locally on your iPhone or iPad and is <strong>not</strong> transmitted to our analytics providers:</p>
+    <ul>
+      <li>Favorite scenes and sounds</li>
+      <li>Timer and fade-out preferences</li>
+      <li>Onboarding completion status and other app settings</li>
+      <li>Last playback state used for optional auto-resume</li>
+    </ul>
+
+    <h3>Information Collected Automatically — Analytics (Mixpanel)</h3>
+    <p>When you use FanCalm, we send product analytics events to <strong>Mixpanel</strong>. Mixpanel assigns your device a random identifier (<code>distinct_id</code>) so events from the same installation can be grouped. We do not call Mixpanel's <code>identify()</code> API, so we do not link this identifier to your name or email unless you contact us separately.</p>
+    <p>Mixpanel may also collect standard device and session properties (for example, iOS version, device model, app version, and session start/end events) because automatic session tracking is enabled in the App.</p>
+    <p>Examples of custom events we send to Mixpanel include:</p>
+    <ul>
+      <li><strong>App usage:</strong> app open, scenes tab opened, timer opened</li>
+      <li><strong>Audio playback:</strong> fan or scene selected, playback started/stopped, session duration, intensity changes</li>
+      <li><strong>Scenes:</strong> scene card tapped, favorite toggled</li>
+      <li><strong>Timer settings:</strong> timer duration set, fade-out toggled, fade duration selected</li>
+      <li><strong>Subscriptions:</strong> paywall shown or dismissed, plan selected, purchase started or completed, premium card tapped</li>
+      <li><strong>Other:</strong> feedback opened, in-app review prompt requested</li>
+    </ul>
+    <p>Event properties may include, for example: sound or scene identifiers, playback duration (in seconds), subscription product identifiers, whether content is premium, app version, platform (<code>ios</code>), and whether you have an active Pro subscription (<code>is_pro</code>).</p>
+
+    <h3>Information Collected Automatically — Subscriptions &amp; Conversions (Firebase / Google)</h3>
+    <p>When you interact with subscriptions, we send limited purchase-related events to <strong>Google Firebase Analytics</strong> (GA4), including:</p>
+    <ul>
+      <li><strong>trial_start</strong> — when you tap to start a free-trial subscription (before payment is confirmed)</li>
+      <li><strong>subscribe</strong> — when Apple verifies a completed subscription purchase</li>
+      <li><strong>restore_success</strong> — when a restore-purchases action successfully unlocks Pro</li>
+      <li><strong>Transaction data</strong> — verified StoreKit transaction details sent via Firebase's <code>logTransaction</code> API to support subscription measurement and Google Ads on-device conversion reporting</li>
+    </ul>
+    <p>These events may include: product identifier, subscription price and currency (based on your App Store storefront region), whether the purchase included a free trial, and the in-app source that led to the paywall (for example, locked content or settings).</p>
+    <p>Apple processes all payments. We never receive your payment card number or full Apple ID credentials.</p>
+
+    <h3>Information We Do NOT Collect</h3>
+    <ul>
+      <li>We do not require your name, email address, or phone number to use the App.</li>
+      <li>We do not access your microphone, camera, contacts, photo library, precise location, or Health data.</li>
+      <li>We do not use the iOS App Tracking Transparency framework and do not collect your IDFA for cross-app tracking.</li>
+      <li>We do not currently use third-party crash-reporting services (such as Firebase Crashlytics or Sentry). Diagnostic logs written by the App may remain on your device and are not uploaded to our servers.</li>
+    </ul>
+  </section>
+
+  <section id="how-we-use">
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information described above for the following purposes:</p>
+    <ul>
+      <li><strong>To provide and maintain the App:</strong> Deliver audio content, remember your on-device settings, manage subscriptions through Apple, and unlock premium features.</li>
+      <li><strong>To understand and improve the App:</strong> Analyze which sounds, scenes, and features are used, how long sessions last, and where users encounter the paywall — via Mixpanel.</li>
+      <li><strong>To measure subscriptions and marketing performance:</strong> Understand trial starts, completed purchases, and restores — via Firebase Analytics and Google's on-device conversion tools. This helps us evaluate whether our advertising campaigns lead to subscriptions.</li>
+      <li><strong>To provide customer support:</strong> Respond to inquiries, bug reports, and feedback you send us directly.</li>
+      <li><strong>To comply with legal obligations:</strong> Meet applicable laws, regulations, and lawful requests.</li>
+    </ul>
+    <p>We do not use Mixpanel or Firebase data to serve third-party ads inside FanCalm, and we do not sell your personal information to data brokers. Firebase subscription data may be used by Google to measure the effectiveness of ads that led you to install or subscribe to the App (for example, through SKAdNetwork and on-device conversion APIs), as described in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2>4. Third-Party Services</h2>
+    <p>FanCalm integrates the following third-party services. Each processes data under its own privacy policy:</p>
+
+    <h3>Apple</h3>
+    <ul>
+      <li><strong>Apple App Store &amp; StoreKit:</strong> Distributes the App, processes in-app purchases and subscriptions, and provides purchase receipts we use to verify Pro access. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
+    </ul>
+
+    <h3>Mixpanel (Product Analytics)</h3>
+    <ul>
+      <li><strong>Provider:</strong> Mixpanel, Inc.</li>
+      <li><strong>Purpose:</strong> Product analytics — app usage, playback behavior, paywall funnel, and subscription status flag (<code>is_pro</code>).</li>
+      <li><strong>Data shared:</strong> Device identifier assigned by Mixpanel, app version, platform, event names and properties listed in Section 2, and automatic session events.</li>
+      <li><strong>Privacy policy:</strong> <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener">mixpanel.com/legal/privacy-policy</a></li>
+    </ul>
+
+    <h3>Google Firebase Analytics (Subscription &amp; Conversion Analytics)</h3>
+    <ul>
+      <li><strong>Provider:</strong> Google LLC (Firebase)</li>
+      <li><strong>Purpose:</strong> Subscription funnel events, verified purchase reporting, and measurement of ad-driven conversions.</li>
+      <li><strong>Data shared:</strong> Firebase app-instance identifier, subscription product ID, price, currency, trial status, paywall source, and verified StoreKit transaction metadata via <code>logTransaction</code>.</li>
+      <li><strong>Related services:</strong> Google Analytics for Firebase and Google Ads on-device conversion measurement (included as Firebase SDK dependencies).</li>
+      <li><strong>Privacy policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+    </ul>
+
+    <h3>Audio Engine Libraries (On-Device Only)</h3>
+    <ul>
+      <li><strong>AudioKit / SoundpipeAudioKit:</strong> Open-source audio libraries used to synthesize fan sounds on your device. These libraries do not transmit your audio or usage data to us or to AudioKit.</li>
+    </ul>
+
+    <h3>What We Do Not Use</h3>
+    <ul>
+      <li>We do not integrate social-login providers (including Sign in with Apple) in the current version of the App.</li>
+      <li>We do not integrate third-party crash reporters, push-notification marketing platforms, or advertising SDKs that display ads inside the App.</li>
+    </ul>
+
+    <p>We do not sell your personal information. We share data with Mixpanel and Google only as described in this policy to operate, analyze, and measure the App.</p>
+  </section>
+
+  <section id="data-retention">
+    <h2>5. Data Retention</h2>
+    <p>Retention periods depend on where data is stored:</p>
+    <ul>
+      <li><strong>On-device preferences:</strong> Kept on your device until you delete the App or reset the relevant settings.</li>
+      <li><strong>Mixpanel analytics:</strong> Retained according to <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener">Mixpanel's privacy policy</a> and our Mixpanel project settings. You may request deletion by contacting us (see Section 10).</li>
+      <li><strong>Firebase / Google analytics:</strong> Retained according to <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google's data-retention settings</a> for our Firebase project, typically up to 14 months for GA4 event data unless configured otherwise.</li>
+      <li><strong>Support correspondence:</strong> Retained for up to 2 years to provide consistent support, unless you ask us to delete it sooner.</li>
+    </ul>
+    <p>Because analytics identifiers are pseudonymous, we may need the email address you used to contact us (or other details you provide) to locate and delete your data across providers.</p>
+  </section>
+
+  <section id="children">
+    <h2>6. Children's Privacy</h2>
+    <div class="callout">
+      <strong>Important:</strong> FanCalm is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.
+    </div>
+    <p>FanCalm is designed for general audiences, including parents using the App to help infants sleep. In that context, the App is operated by the adult parent or guardian. Analytics events reflect how the adult uses the App on the device; we do not knowingly collect information directly from children.</p>
+    <p>If you believe we have inadvertently collected information from a child under 13, please contact us immediately and we will take steps to delete it.</p>
+    <p>For users in the European Economic Area, we apply a minimum age of 16 where required by local law.</p>
+  </section>
+
+  <section id="your-rights">
+    <h2>7. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+      <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete data.</li>
+      <li><strong>Deletion:</strong> Request deletion of personal data we control or can request deletion of from our analytics providers.</li>
+      <li><strong>Portability:</strong> Request your data in a machine-readable format where applicable.</li>
+      <li><strong>Object or restrict processing:</strong> Object to certain processing, including analytics, where applicable law provides this right.</li>
+    </ul>
+    <p>To exercise these rights, email us using the contact details in Section 10. We will respond within 30 days.</p>
+
+    <h3>Opting Out of Analytics</h3>
+    <p>FanCalm does not currently offer an in-app analytics opt-out toggle. Because we do not use the ATT prompt, changing <strong>Settings → Privacy &amp; Security → Tracking</strong> on iOS will not disable Mixpanel or Firebase collection by itself.</p>
+    <p>You may:</p>
+    <ul>
+      <li>Contact us to request deletion of analytics data associated with your device</li>
+      <li>Delete the App from your device to stop future analytics collection from that installation</li>
+      <li>Limit Apple's own advertising settings under <strong>Settings → Privacy &amp; Security → Apple Advertising</strong> (this controls Apple's services, not FanCalm's analytics directly)</li>
+    </ul>
+
+    <h3>European Economic Area &amp; United Kingdom (GDPR)</h3>
+    <p>Our legal bases for processing include: (i) <strong>legitimate interests</strong> in understanding and improving the App and measuring subscriptions; and (ii) <strong>contract performance</strong> where processing is necessary to provide subscription features you request. Where required by law, we rely on your consent. You may lodge a complaint with your local data-protection authority.</p>
+    <p>Analytics data may be processed in the United States by Mixpanel and Google. Those providers use appropriate safeguards for international transfers as described in their privacy policies.</p>
+
+    <h3>California Residents (CCPA / CPRA)</h3>
+    <p>California residents have the right to know what personal information is collected, to request deletion, and to opt out of the <em>sale</em> or <em>sharing</em> of personal information. We do not sell personal information for money. We do share pseudonymous usage and subscription data with Mixpanel and Google for analytics and conversion measurement as described in this policy, which may constitute "sharing" under California law. You may submit a request using the contact details in Section 10. We do not discriminate against you for exercising these rights.</p>
+  </section>
+
+  <section id="security">
+    <h2>8. Data Security</h2>
+    <p>We implement reasonable security measures to protect your information, including:</p>
+    <ul>
+      <li>Encrypted data transmission (HTTPS/TLS) between the App and analytics providers</li>
+      <li>Access controls limiting which team members can view analytics dashboards</li>
+      <li>Reliance on Apple's secure payment infrastructure for all financial transactions</li>
+    </ul>
+    <p>No method of transmission or storage is completely secure. We cannot guarantee absolute security, but we work to protect your data using commercially reasonable means.</p>
+  </section>
+
+  <section id="changes">
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will:</p>
+    <ul>
+      <li>Update the "Last updated" date at the top of this page</li>
+      <li>Notify you via an in-app notice for material changes, where practical</li>
+    </ul>
+    <p>Your continued use of FanCalm after changes take effect constitutes your acceptance of the updated policy. We encourage you to review this page periodically.</p>
+  </section>
+
+  <section id="contact">
+    <h2>10. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, wish to exercise your data rights, or want to request deletion of analytics data, please contact us:</p>
+    <div class="contact-box">
+      <p><strong>FanCalm</strong></p>
+      <p>Email: <a href="mailto:chun.feng@yanxixuechi-energy.com">chun.feng@yanxixuechi-energy.com</a></p>
+      <p>Support: <a href="https://yanxixuechi-energy.com/support.html">yanxixuechi-energy.com/support</a></p>
+      <p>We aim to respond to all privacy-related inquiries within <strong>5 business days</strong>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 FanCalm. All rights reserved.</p>
+    <nav>
+      <a href="https://yanxixuechi-energy.com/privacy-policy.html">Privacy Policy</a>
+      <a href="https://yanxixuechi-energy.com/terms-of-service.html">Terms of Service</a>
+      <a href="https://yanxixuechi-energy.com/support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
