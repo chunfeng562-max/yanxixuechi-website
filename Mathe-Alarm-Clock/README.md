@@ -10,10 +10,10 @@ Official static legal and support website for the Math Alarm iOS app.
 
 Use these public pages in App Store Connect:
 
-- Home: `https://chunfeng562-max.github.io/yanxixuechi-website/Mathe-Alarm-Clock/`
-- Privacy Policy: `https://chunfeng562-max.github.io/yanxixuechi-website/Mathe-Alarm-Clock/privacy.html`
-- Privacy Choices: `https://chunfeng562-max.github.io/yanxixuechi-website/Mathe-Alarm-Clock/privacy-choices.html`
-- Terms of Use: `https://chunfeng562-max.github.io/yanxixuechi-website/Mathe-Alarm-Clock/terms.html`
-- Support: `https://chunfeng562-max.github.io/yanxixuechi-website/Mathe-Alarm-Clock/support.html`
+- Home: `https://yanxixuechi-energy.com/mathe-alarm-clock/`
+- Privacy Policy: `https://yanxixuechi-energy.com/mathe-alarm-clock/privacy`
+- Privacy Choices: `https://yanxixuechi-energy.com/mathe-alarm-clock/privacy-choices`
+- Terms of Use: `https://yanxixuechi-energy.com/mathe-alarm-clock/terms`
+- Support: `https://yanxixuechi-energy.com/mathe-alarm-clock/support`
 
 The site is plain HTML and CSS with no cookies, analytics, trackers, forms, build step, or runtime dependencies.
