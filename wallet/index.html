@@ -28,7 +28,7 @@
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="mailto:chun.feng@yanxixuechi-energy.com?subject=Wallet%20early%20access&amp;body=Please%20let%20me%20know%20when%20Wallet%20is%20available%20on%20the%20U.S.%20App%20Store.">Join early access</a>
+        <a class="nav-cta" href="#notify">Join early access</a>
       </nav>
     </div>
   </header>
@@ -40,7 +40,7 @@
         <h1>Your important documents. <em>Organized and ready.</em></h1>
         <p class="hero-lead">Keep photos of essential records in one calm, searchable place. When paperwork calls, turn what you need into a PDF for printing or sharing.</p>
         <div class="hero-actions">
-          <a class="button primary" href="mailto:chun.feng@yanxixuechi-energy.com?subject=Wallet%20launch%20notification&amp;body=Please%20let%20me%20know%20when%20Wallet%20is%20available%20on%20the%20U.S.%20App%20Store.">Notify me at launch</a>
+          <a class="button primary" href="#notify">Notify me at launch</a>
           <a class="button secondary" href="#how-it-works">See how it works</a>
         </div>
         <p class="hero-note">Price being tested: <strong>$19.99</strong> one time · Not final · No payment today</p>
@@ -167,7 +167,7 @@
           <span>Price being tested</span>
           <strong><sup>$</sup>19.99</strong>
           <small>one-time purchase</small>
-          <a class="button primary full" href="mailto:chun.feng@yanxixuechi-energy.com?subject=Wallet%20launch%20notification&amp;body=Please%20let%20me%20know%20when%20Wallet%20is%20available%20on%20the%20U.S.%20App%20Store.">Notify me at launch</a>
+          <a class="button primary full" href="#notify">Notify me at launch</a>
           <small>No price reservation or payment</small>
         </div>
       </div>
@@ -178,8 +178,8 @@
         <div><p class="eyebrow">Questions</p><h2>Before you join early access.</h2></div>
       </div>
       <div class="faq-grid">
-        <details><summary>Is Wallet available now?</summary><p>Not yet. The app is in development for iPhone and is planned for the U.S. App Store. Join early access by email to hear when it becomes available.</p></details>
-        <details><summary>Does joining cost anything?</summary><p>No. The email link simply lets you express interest. It does not create a purchase, charge, or binding reservation.</p></details>
+        <details><summary>Is Wallet available now?</summary><p>Not yet. The app is in development for iPhone and is planned for the U.S. App Store. Enter your email to hear when it becomes available.</p></details>
+        <details><summary>Does joining cost anything?</summary><p>No. Submitting the notification form simply lets you express interest. It does not create a purchase, charge, or binding reservation.</p></details>
         <details><summary>Is $19.99 the final price?</summary><p>$19.99 is the planned one-time launch price for this market test. Final price, availability, and included features will be confirmed before release.</p></details>
         <details><summary>Can I use a stored copy as official ID?</summary><p>No. Wallet is an organization and export utility. Stored images and PDFs do not replace original documents or official digital credentials.</p></details>
         <details><summary>What can I organize?</summary><p>The concept covers core identity, travel, health, benefit, vehicle, property, education, and family records, along with other reference document images.</p></details>
@@ -187,12 +187,22 @@
       </div>
     </section>
 
-    <section class="final-cta">
-      <div class="shell center">
+    <section class="final-cta" id="notify">
+      <div class="shell center signup-card">
         <p class="eyebrow centered">Coming soon</p>
         <h2>Give important documents a place of their own.</h2>
-        <p>Join the prelaunch list and help us measure demand for Wallet on iPhone.</p>
-        <a class="button primary" href="mailto:chun.feng@yanxixuechi-energy.com?subject=Wallet%20early%20access&amp;body=Please%20let%20me%20know%20when%20Wallet%20is%20available%20on%20the%20U.S.%20App%20Store.">Join early access</a>
+        <p>Enter your email to receive a launch notification for Wallet on the U.S. App Store.</p>
+        <form class="signup-form" name="wallet-launch-notification" method="POST" action="/wallet/thank-you.html" data-netlify="true" netlify-honeypot="company-website">
+          <input type="hidden" name="form-name" value="wallet-launch-notification">
+          <p class="hidden-field"><label>Do not fill this out if you are human: <input name="company-website" tabindex="-1" autocomplete="off"></label></p>
+          <label class="field-label" for="launch-email">Email address</label>
+          <div class="form-row">
+            <input id="launch-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+            <button class="button primary" type="submit">Notify me at launch</button>
+          </div>
+          <label class="consent-row"><input name="launch-consent" type="checkbox" value="yes" required><span>I agree to receive launch-related email about Wallet. I can unsubscribe at any time.</span></label>
+          <p class="form-note">No payment or price reservation. Please do not submit sensitive document information.</p>
+        </form>
       </div>
     </section>
   </main>
